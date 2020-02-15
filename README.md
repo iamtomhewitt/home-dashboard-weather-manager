@@ -80,13 +80,6 @@
     "message": "There are missing query parameters"
 }
 ```
-* `400` bad request if no api key specified
-```json
-{
-    "status": 400,
-    "message": "No API key specified"
-}
-```
 * `401` unauthorised if api key is incorrect
 ```json
 {
