@@ -1,7 +1,7 @@
 <h1 align="center">Home Dashboard Weather Manager </h1>
 <p align="center">
     <img src="https://travis-ci.com/iamtomhewitt/home-dashboard-weather-manager.svg"/>
-    <img src="https://heroku-badge.herokuapp.com/?app=home-dashboard-weather-mngr&style=round&svg=1"/>
+    <img src="https://heroku-badge.herokuapp.com/?app=home-dashboard-weather-manager&style=round&svg=1"/>
 </p>
 <p align="center">
     ☀ A piggy back API of <a href="https://darksky.net/dev">Darksky</a> to get the weather for my home dashboard.
