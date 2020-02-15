@@ -1,7 +1,7 @@
 {
   "name": "home-dashboard-weather-manager",
   "version": "1.0.0",
-  "description": "",
+  "description": "☀ A piggy back API of Darksky to get the weather for my home dashboard",
   "main": "app.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
