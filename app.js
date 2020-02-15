@@ -32,7 +32,21 @@ app.get('/weather', (req, res) => {
 
     if (!latitude || !longitude || !apiKey) {
         res.status(badRequest).send(response(badRequest, 'There are missing query parameters'));
+        return;
     }
+
+    const url = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude}`;
+
+    request(url, (err, resp) => {
+        if (err) {
+            res.status(serverError).send(response(serverError, err.message));
+            return;
+        }
+
+        if (resp.statusCode === 403) {
+            res.status(unauthorised).send(response(unauthorised, 'API key is incorrect'));
+        }
+    });
 });
 
 const port = 3001;
