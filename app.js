@@ -45,7 +45,34 @@ app.get('/weather', (req, res) => {
 
         if (resp.statusCode === 403) {
             res.status(unauthorised).send(response(unauthorised, 'API key is incorrect'));
+            return;
         }
+
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const darkskyResponse = JSON.parse(resp.body);
+        const current = {
+            summary: darkskyResponse.currently.summary,
+            icon: darkskyResponse.currently.icon,
+            temperature: darkskyResponse.currently.temperature,
+        };
+        const week = [];
+
+        for (let i = 1; i < darkskyResponse.daily.data.length; i += 1) {
+            const date = new Date(darkskyResponse.daily.data[i].time * 1000);
+            const day = days[date.getDay()];
+            const icon = darkskyResponse.daily.data[i].icon;
+            const temperatureLow = darkskyResponse.daily.data[i].temperatureLow;
+            const temperatureHigh = darkskyResponse.daily.data[i].temperatureHigh;
+
+            week.push({
+                day,
+                icon,
+                temperatureLow,
+                temperatureHigh,
+            });
+        }
+
+        res.status(success).send({ current, week });
     });
 });
 
