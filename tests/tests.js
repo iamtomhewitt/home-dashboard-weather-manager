@@ -45,7 +45,7 @@ describe('/weather tests', () => {
 
     it('/weather gives 200', (done) => {
         request(server)
-            .get(`/weather?latitude=&longitude=&apiKey=${process.env.API_KEY}`)
+            .get(`/weather?latitude=37.8267&longitude=-122.4233&apiKey=${process.env.API_KEY}`)
             .expect(200)
             .end((err, response) => {
                 if (err) {
