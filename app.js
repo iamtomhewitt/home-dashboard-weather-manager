@@ -35,7 +35,7 @@ app.get('/weather', (req, res) => {
         return;
     }
 
-    const url = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude}`;
+    const url = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude}?units=uk`;
 
     request(url, (err, resp) => {
         if (err) {
