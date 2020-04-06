@@ -15,7 +15,8 @@
     "express-list-endpoints": "^4.0.1",
     "mocha": "^7.0.0",
     "request": "^2.88.0",
-    "supertest": "^4.0.2"
+	"supertest": "^4.0.2",
+	"minimist": ">=0.2.1"
   },
   "engines": {
     "node": "12.14.1"
