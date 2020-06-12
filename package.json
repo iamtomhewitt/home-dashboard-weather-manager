@@ -1,6 +1,6 @@
 {
   "name": "home-dashboard-weather-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "☀ A piggy back API of Darksky to get the weather for my home dashboard",
   "main": "app.js",
   "scripts": {
