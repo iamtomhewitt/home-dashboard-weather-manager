@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "release": "standard-version",
+    "release": "github-releaser",
     "lint": "npm run pretest -- --fix",
     "test": "mocha 'tests/**/*.js' --exit"
   },
@@ -14,10 +14,11 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-list-endpoints": "^4.0.1",
+    "github-releaser": "^1.1.2",
+    "minimist": ">=0.2.1",
     "mocha": "^7.0.0",
     "request": "^2.88.0",
-    "supertest": "^4.0.2",
-    "minimist": ">=0.2.1"
+    "supertest": "^4.0.2"
   },
   "engines": {
     "node": "12.14.1"
@@ -28,12 +29,12 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "standard-version": "^8.0.0"
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamtomhewitt/home-dashboard-weather-manager.git"
+    "url": "git+https://github.com/iamtomhewitt/home-dashboard-weather-manager.git",
+    "apiUrl": "https://api.github.com/repos/iamtomhewitt/home-dashboard-weather-manager"
   },
   "author": "Tom Hewitt",
   "license": "ISC",
